@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="CENTER" maxHeight="-Infinity"
+	maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+	prefHeight="768.0" prefWidth="1024.0"
+	style="-fx-background-color: white;"
+	xmlns="http://javafx.com/javafx/8.0.171"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="miniproject.Controller">
+	<columnConstraints>
+		<ColumnConstraints hgrow="SOMETIMES"
+			maxWidth="410.0" minWidth="10.0" prefWidth="67.0" />
+		<ColumnConstraints hgrow="SOMETIMES"
+			maxWidth="524.0" minWidth="10.0" prefWidth="338.0" />
+		<ColumnConstraints hgrow="SOMETIMES"
+			maxWidth="274.0" minWidth="10.0" prefWidth="274.0" />
+		<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
+			prefWidth="100.0" />
+	</columnConstraints>
+	<rowConstraints>
+		<RowConstraints maxHeight="150.0" minHeight="0.0"
+			prefHeight="146.0" vgrow="SOMETIMES" />
+		<RowConstraints maxHeight="373.0" minHeight="10.0"
+			prefHeight="308.0" vgrow="SOMETIMES" />
+		<RowConstraints maxHeight="200.0" minHeight="10.0"
+			prefHeight="166.0" vgrow="SOMETIMES" />
+		<RowConstraints maxHeight="107.0" minHeight="10.0"
+			prefHeight="101.0" vgrow="SOMETIMES" />
+		<RowConstraints maxHeight="47.0" minHeight="10.0"
+			prefHeight="47.0" vgrow="SOMETIMES" />
+	</rowConstraints>
+	<children>
+		<Label alignment="CENTER" prefHeight="57.0" prefWidth="292.0"
+			style="-fx-background-color: white;" text="Men's OOTD"
+			GridPane.columnIndex="1" GridPane.columnSpan="2"
+			GridPane.halignment="CENTER">
+			<font>
+				<Font size="48.0" />
+			</font>
+		</Label>
+		<Button fx:id="loginbtn" mnemonicParsing="false"
+			prefWidth="90.0"
+			style="-fx-background-color: black; -fx-background-radius: 10;"
+			text="로그인" textFill="WHITE" GridPane.columnIndex="3"
+			GridPane.halignment="CENTER">
+			<GridPane.margin>
+				<Insets left="50.0" />
+			</GridPane.margin>
+		</Button>
+		<Label text="(주) Men's OOTD" GridPane.columnIndex="1"
+			GridPane.columnSpan="2" GridPane.halignment="CENTER"
+			GridPane.rowIndex="4">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Label>
+		<HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0"
+			spacing="40.0"
+			style="-fx-background-color: white; -fx-border-color: black;"
+			GridPane.columnSpan="4" GridPane.halignment="CENTER"
+			GridPane.rowIndex="1" GridPane.valignment="CENTER">
+			<children>
+				<ImageView fx:id="item_image" fitHeight="250.0"
+					fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+					<HBox.margin>
+						<Insets right="35.0" />
+					</HBox.margin>
+				</ImageView>
+				<Label fx:id="item_name" alignment="CENTER"
+					contentDisplay="CENTER" prefWidth="130.0"
+					style="-fx-border-radius: 10; -fx-border-color: white;" text="상품명"
+					textAlignment="CENTER" />
+				<Label fx:id="item_quantity" alignment="CENTER"
+					contentDisplay="CENTER" prefWidth="130.0"
+					style="-fx-border-radius: 10; -fx-border-color: white;" text="수량"
+					textAlignment="CENTER" />
+				<Label fx:id="item_price" alignment="CENTER"
+					contentDisplay="CENTER" prefWidth="130.0"
+					style="-fx-border-radius: 10; -fx-border-color: white;" text="가격"
+					textAlignment="CENTER" />
+			</children>
+			<GridPane.margin>
+				<Insets bottom="15.0" />
+			</GridPane.margin>
+		</HBox>
+		<HBox alignment="CENTER" prefHeight="134.0" prefWidth="1024.0"
+			spacing="20.0" GridPane.columnSpan="4" GridPane.rowIndex="2">
+			<children>
+				<VBox alignment="CENTER" prefHeight="138.0" prefWidth="118.0"
+					spacing="20.0">
+					<children>
+						<Label alignment="CENTER" prefWidth="130.0"
+							style="-fx-border-color: black; -fx-border-radius: 10;"
+							text="주문자명" />
+						<Label alignment="CENTER" prefWidth="130.0"
+							style="-fx-border-color: black; -fx-border-radius: 10;"
+							text="전화번호" />
+					</children>
+				</VBox>
+				<VBox alignment="CENTER" prefHeight="138.0" prefWidth="200.0"
+					spacing="10.0">
+					<children>
+						<TextField fx:id="userName" prefHeight="0.0"
+							prefWidth="100.0" />
+						<TextField fx:id="userTel" />
+					</children>
+				</VBox>
+				<VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0"
+					spacing="20.0">
+					<children>
+						<Label alignment="CENTER" prefWidth="130.0"
+							style="-fx-border-color: black; -fx-border-radius: 10;"
+							text="이 메 일" />
+						<Label alignment="CENTER" minWidth="-Infinity"
+							prefHeight="21.0" prefWidth="130.0"
+							style="-fx-border-color: black; -fx-border-radius: 10;"
+							text="주    소" />
+					</children>
+				</VBox>
+				<VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0"
+					spacing="10.0">
+					<children>
+						<TextField fx:id="userEmail" minWidth="-Infinity"
+							prefHeight="29.0" prefWidth="200.0" />
+						<TextField fx:id="userAddress" maxWidth="-Infinity"
+							prefHeight="29.0" prefWidth="200.0" />
+					</children>
+				</VBox>
+			</children>
+		</HBox>
+		<HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0"
+			spacing="40.0" GridPane.columnIndex="1" GridPane.columnSpan="2"
+			GridPane.rowIndex="3">
+			<children>
+				<Button fx:id="orderbtn" mnemonicParsing="false"
+					onAction="#orderdetail" prefHeight="35.0" prefWidth="200.0"
+					style="-fx-background-color: black; -fx-background-radius: 10;"
+					text="주문하기" textFill="WHITE" />
+				<Button mnemonicParsing="false" onAction="#cancelProc"
+					prefHeight="35.0" prefWidth="200.0"
+					style="-fx-background-color: black; -fx-background-radius: 10;"
+					text="취소" textFill="WHITE" />
+			</children>
+			<GridPane.margin>
+				<Insets bottom="10.0" top="10.0" />
+			</GridPane.margin>
+		</HBox>
+	</children>
+</GridPane>
